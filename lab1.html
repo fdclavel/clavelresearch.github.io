@@ -374,12 +374,12 @@ div.tocify {
 
 
 <ul>
-<li><a href="clavelresearch.wordpress.com">Website</a></li>
-<li><a href="github.com/fdclavel">Github</a></li>
+<li><a href="http://clavelresearch.wordpress.com">Website</a></li>
+<li><a href="http://github.com/fdclavel">Github</a></li>
 <li><a href="http://twitter.com/fdclavel">Twitter</a> <br></li>
 </ul>
-<div id="back-to-repository-home" class="section level2">
-<h2><a href="/index.html"><em>Back to Repository Home</em></a><br></h2>
+<p><a href="/index.html"><em>Back to Repository Home</em></a><br></p>
+<hr />
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 div.green { background-color:#e6ffd0; border-radius: 5px; padding: 20px;}
@@ -388,7 +388,6 @@ div.warn { background-color:#ee1111; color:#ffffff; font-weight:bold; border-rad
 div.safe { background-color:#00bb00; color:#ffffff; border-radius: 5px; padding: 20px; font-family:tahoma; line-height:150%}
 div.data {background-color:#ddddee; border-radius: 5px; padding: 20px; font-family:monospace}
 </style>
-</div>
 <div id="using-code-chunks-in-r-markdown" class="section level1">
 <h1>Using code chunks in R markdown</h1>
 <p>Use ctrl+alt+i to start a new code chunk in R markdown.</p>
@@ -438,18 +437,18 @@ number_list2&lt;-<span class="kw">seq</span>(<span class="dt">from=</span><span 
 <pre><code>## [1] 289.3959</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#you can randomly sample from a Z distribution using the rnorm() function.</span>
 <span class="kw">rnorm</span>(<span class="dv">25</span>, <span class="dt">mean=</span><span class="dv">0</span>, <span class="dt">sd=</span><span class="dv">1</span>)</code></pre></div>
-<pre><code>##  [1]  1.15065941 -0.57093872 -0.08266445 -0.23446797  1.00390251
-##  [6] -1.26667184  0.43913544  0.82985443 -0.07751996  1.23170687
-## [11] -0.30344491 -2.24380654  0.28032614 -0.89223835  0.97324564
-## [16]  0.33125781 -0.10469027  0.80404677  0.74143819 -0.26610678
-## [21] -2.11225266  0.13334112 -0.15151611  0.69798322 -0.04719744</code></pre>
+<pre><code>##  [1] -0.464093529 -0.700992138  1.111846214  0.639013885  0.600186657
+##  [6] -1.683091424 -0.613919761 -0.819677021  1.118852116  0.134088278
+## [11] -0.548526504  1.365144368  0.003980502  0.389794466 -0.821133806
+## [16]  0.128191413  0.120221943  0.705647881 -0.739867245 -0.518064745
+## [21]  1.078756896 -1.353828345 -0.273965641  0.472367311 -0.454228836</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#you can also generate random matrices with placeholder values, using the matrix() command.</span>
 m &lt;-<span class="kw">matrix</span>(<span class="ot">NA</span>, <span class="dv">50</span>,<span class="dv">3</span>) <span class="co">#creates a matrix of &quot;NA&quot;s with 50 rows and 3 columns</span>
 
 <span class="co">#sample() is a useful way to randomly draw from a pre-existing data array, matrix, list, etc., either with replacement or without.</span>
 
 <span class="kw">sample</span>(number_list2,<span class="dv">8</span>,<span class="dt">replace=</span>T) <span class="co">#sample 8 values from number list 2, with replacement.</span></code></pre></div>
-<pre><code>## [1] 931 396 926 586 976 771 701 831</code></pre>
+<pre><code>## [1] 826 606 611 456 416 246 346 561</code></pre>
 </div>
 <div id="writing-your-own-functions." class="section level1">
 <h1>Writing your own Functions.</h1>
@@ -487,7 +486,7 @@ means_numlist3 &lt;-<span class="kw">c</span>(<span class="ot">NA</span>,<span c
 
 <span class="co">#calling the object will show us the means we want to see.</span>
 means_numlist3</code></pre></div>
-<pre><code>## [1] 269.3333 557.6667 304.3333 654.3333 417.6667 314.3333 486.0000 754.3333</code></pre>
+<pre><code>## [1] 571.0000 112.6667 661.0000 412.6667 332.6667 747.6667 777.6667 676.0000</code></pre>
 </div>
 
 
