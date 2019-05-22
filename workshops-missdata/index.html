@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Fred Clavel" />
 
 
-<title>Public Github Repository</title>
+<title>Missing Data Workshop (Jon Helm, Ph.D.)</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -1358,6 +1359,109 @@ window.initializeCodeFolding = function(show) {
 </script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -1619,71 +1723,1780 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Public Github Repository</h1>
-<h3 class="subtitle">Fred Clavel, Ph.D.</h3>
+<h1 class="title toc-ignore">Missing Data Workshop (Jon Helm, Ph.D.)</h1>
+<h4 class="author">Fred Clavel</h4>
+<h4 class="date">5/17/2019</h4>
 
 </div>
 
 
+<p><strong>Sites for more info:</strong> <br> - <a href="jonhelm.org">Jon Helm</a></p>
+<div id="notes-from-jons-lecture-slides" class="section level1">
+<h1>Notes from Jon’s Lecture Slides</h1>
+<div id="sampling-and-how-it-links-to-the-problem-of-missing-data" class="section level2">
+<h2>Sampling and how it links to the problem of missing data</h2>
+<p>Scientific process involves random sampling. When we have missingness, randoom sampling assumption is violated. Generalizability is undermined as a result.</p>
+<p>Performing deletion methods essentially gives us a non-random sample of a random sample. Once we get to this point, we can no longer generalize to the population. <em>Listwise deletion</em> makes this a problem because it is too aggressive (though <em>pairwise deletion</em> also presents issues too).</p>
+<p>Most data analytic programs will perform listwise deletion before conducting standard analytic procedures (and will not necessarily inform you, or will bury it in the footnotes of the output). Be careful, because listwise deletion always assumes MCAR. If the data are MAR or NMAR, you obtain biased estimates.</p>
+</div>
+<div id="patterns-of-missingness" class="section level2">
+<h2>Patterns of missingness</h2>
 <ul>
-<li><a href="http://clavelresearch.wordpress.com">Website</a></li>
-<li><a href="http://github.com/fdclavel">Github</a></li>
-<li><a href="http://twitter.com/fdclavel">Twitter</a></li>
+<li>Univariate (uncommon)</li>
+<li>General (missing on more than one variable, typically non-monotonic)</li>
+</ul>
+</div>
+<div id="causes-and-mechanisms-of-missingness" class="section level2">
+<h2>Causes and Mechanisms of missingness</h2>
+<div id="causes" class="section level3">
+<h3>CAUSES</h3>
+<ul>
+<li>True reason (not the assumed reason) that data are missing</li>
+</ul>
+</div>
+<div id="mechanisms" class="section level3">
+<h3>MECHANISMS</h3>
+<p><strong>MCAR: Missing completely at random </strong></p>
+<ul>
+<li>Missingness on Y is unrelated to the expected Y; unrelated to any observed Xs.</li>
+<li>When we run analyses without first accounting for missingness, we are inherently assuming MCAR (<strong>which may be wrong</strong>).</li>
+<li>Unfortunately, MCAR can never be truly known, because we would need the actual complete data to test the first part of the assumption (that Y miss is unrelated to Y complete)</li>
+</ul>
+<p><strong>MAR: Missing at random</strong></p>
+<ul>
+<li>Missingness on Y is unrelated to the expected Y, after adjusting for Xs (which are related; i.e., there is some variable in the analysis that can account for the missingness).</li>
+<li>We can test this by seeing whether missingness indicators are related to the observed Xs in the data.</li>
+<li>This has shortcomings too however, particularly when dealing with multivariate missingness (it creates exponential patterns, which drastically reduces power and sample size for any MAR testing, and inflates Type 1 error due to multiple tests [e.g., even with 3 variables, we can have 8 patterns of missingness - i.e., 8 subgroups to test against each other])</li>
+<li>This can never be known either, because we still need the complete data to know whether Ymiss is unrelated to Ycomplete</li>
+</ul>
+<p><strong>NMAR/MNAR: Not Missing at Random/Missing Not at Random</strong></p>
+<ul>
+<li>Missingness on Y is related to the expected Y, after adjusting for Xs (which are related; i.e., regardless of other variables in the analysis, Y is still missing because of what Y <em>would have been</em>).</li>
+<li>This can never be known for certain either (in all cases you need complete data).</li>
 </ul>
 <hr />
-<p><em>Github repository for supplemental instruction files, including data sets, lab notes, syntax files and scripts, and custom authored learning and data analytic tools.</em></p>
-<div id="tools" class="section level1 tabset tabset-fade tabset-pills">
-<h1><strong>Tools</strong></h1>
-<div id="spss" class="section level2">
-<h2>SPSS</h2>
+<p><strong>QUESTION</strong> – Is there any empirical way to test/estimate the standard (or expected) rate of missingness for a particular variable in a particular population?</p>
+<p>An issue related to power. It matters more WHY they’re missing, even if you expect the missingness, you are still making assumptions about why (one of the mechanisms above) - and so are all prior studies from which you derive the expected missingness value (e.g., diary studies assume 80% retention/20% attrition, generally due to boredom or fatigue).</p>
+<hr />
 </div>
-<div id="sas" class="section level2">
-<h2>SAS</h2>
 </div>
-<div id="mplus" class="section level2">
-<h2>Mplus</h2>
+</div>
+<div id="imputation-strategies" class="section level1">
+<h1>Imputation Strategies</h1>
+<div id="single-imputation" class="section level2">
+<h2>Single Imputation</h2>
 <ul>
-<li>Mplus Coefficient Cruncher</li>
-<li>Mplus Model Fit Aggregator</li>
+<li>Replacing missing values with a best guess</li>
+<li><p>Different approaches to this process include (but are not limited to):<br> <em>:::: Mean imputation</em> <br> <em>:::: Hot deck imputation, Cold deck imputation</em> <br> <em>:::: LOCF, NOCB, or Sandwich methods</em> <br> <em>:::: Regression-based imputation</em> <br></p></li>
+<li><p>Not as widely used, presents issues - generally more benefits than drawbacks <br> <em>:::: Regression based single imputation doesn’t include stochastic elements such as the standard errors of the estimates, and the residual of the model.</em> <br> <em>:::: Multiple imputation helps include some of this stochastic information.</em> <br></p></li>
 </ul>
 </div>
-<div id="r" class="section level2">
-<h2>R</h2>
-</div>
-<div id="excel" class="section level2">
-<h2>Excel</h2>
-</div>
-</div>
-<div id="lab-notes-and-scrawlings" class="section level1 tabset tabset-fade tabset-pills">
-<h1><strong>Lab Notes and Scrawlings</strong></h1>
-<div id="ucsd-sio-stats-winter-2019" class="section level2">
-<h2>UCSD SIO Stats (Winter 2019)</h2>
-<p><strong>R Lab Notes (from UC San Diego SIO Advanced R Stats Course)</strong></p>
+<div id="multiple-imputation" class="section level2">
+<h2>Multiple Imputation</h2>
 <ul>
-<li><a href="lab1.html">Lab 1 - Quick Breakdown: Getting Started in R Markdown</a></li>
-<li><a href="lab2.html">Lab 2 - Using “for” loops</a></li>
-<li><a href="lab3.html">Lab 3 - Data Manipulation using <em>dplyr</em></a></li>
-<li><a href="lab4.html">Lab 4 - Visualizing Data</a></li>
-<li><a href="lab5.html">Lab 5 - ANCOVA pt 1</a></li>
-<li><a href="lab6.html">Lab 6 - ANCOVA pt 2</a></li>
-<li><a href="lab7.html">Lab 7 - Worklow and Organization</a></li>
-<li><a href="lab8.html">Lab 8 - Regression and Maximon Likelihood Example</a></li>
+<li>Averaging betas across multiple imputed data sets.</li>
+<li>Standard errors are handled differently: :::: variability WITHIN imputation - average of squares of se (variacnes wihtin each imputation) :::: variability BETWEEN imputations ::::::: We calculate them (see slides for example):</li>
 </ul>
+<p>within = SE1sq + SE2sq / N-imputations</p>
+<p>between = var(M1, M2, M3)</p>
+<p>V-b0 = W + ( 1 + (1/M)) B</p>
+<p>se-b0 = SQRT(Vb0)</p>
+<hr />
+<p><strong>QUESTION</strong> – Would it be appropriate to conduct beta comparisons across imputed vs. observed groups (assuming sufficiently large subgroups), to determine whether you are getting particularly different estimates from original data (e.g., a Wald test)? If we don’t test, how do we know that imputation is giving us the results we actually want?</p>
+<p><strong>QUESTION</strong> – Do you get different results when using a bootstrapping approach (as MI normally does) vs. a simulation approach (i.e., guesses based on the population estimates derived from the data)? This can be tested, no?</p>
+<hr />
+<p><strong>Multiple Imputation software RARELY uses multiple regression to conduct the procedure in practice. It’s a bit more technical and is based on multivariate normality.</strong></p>
+<p>Typically, Multiple imputation will perform well if one of the variables in the imputation accounts for the missingness (i.e., the data are MAR). - When data are MAR, one of the X variables really does explain scores on Y, so if that X is in the MI model, the best guesses will be pretty good.</p>
+<p>Typically, it also works if missingness is not related to any variable in the data set (i.e., the data are MCAR)</p>
+<p><strong>It does NOT work well if you have NMAR data.</strong> - MI will produced biased guesses with NMAR data because your complete observations are a non-random sample of a random sample.</p>
 </div>
 </div>
-<div id="workshop-materials" class="section level1 tabset tabset-fade tabset-pills">
-<h1><strong>Workshop Materials</strong></h1>
-<div id="missing-data-in-r-sdsuucsd---may-2019" class="section level2">
-<h2>Missing Data in R (SDSU/UCSD - May 2019)</h2>
-<p>This was an 8-hour intensive workshop on missing data concepts and working with practical examples of missingness via multiple imputation procedures in R.</p>
-<p>Relevant files include:</p>
-<ul>
-<li><a href="workshops-missdata/index.html">Workshop Notes and Aggregated R Scripts</a></li>
-<li><a href="workshops-missdata/LectureSlides/Lecture%201%20-%20Concepts%20of%20Missingness%20(4%20slides).pdf">Lecture Slides pt 1 (pdf)</a></li>
-<li><a href="workshops-missdata/LectureSlides/Lecture%202%20-%20Multiple%20Imputation%20(4%20slides).pdf">Lecture Slides pt 2 (pdf)</a><br> <br></li>
-<li>Full R Scripts <br> —- <a href="workshops-missdata/R%20Syntax/1._Basics_of_Imputation.html">1. Basics of Imputation</a> <br> —- <a href="workshops-missdata/R%20Syntax/2._t-tests_in_MICE.html">2. t-Tests using MICE</a> <br> —- <a href="workshops-missdata/R%20Syntax/3._ANOVA_in_MICE.html">3. ANOVA using MICE</a> <br> —- <a href="workshops-missdata/R%20Syntax/4._Correlations_with_MICE.html">4. Correlations with MICE</a> <br> —- <a href="workshops-missdata/R%20Syntax/5._Regression_with_MICE.html">5. Regresison with MICE</a> <br> <br></li>
-<li>Simulated data sets (right click to download) <br> —- <a href="workshops-missdata/Data%20Sets/data_salary.csv">Salary Data from Fictional Professors</a> <br> —- <a href="workshops-missdata/Data%20Sets/data_AcadAchiev.csv">Fictional Academic Achievement Data</a> <br></li>
-</ul>
+<div id="data-analysis" class="section level1">
+<h1>Data Analysis</h1>
+<div id="part-1.-imputing-the-data" class="section level2">
+<h2>Part 1. Imputing the Data</h2>
+<p>Start by importing the data.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">salary &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;3. Data Sets/data_salary.csv&quot;</span>, <span class="dt">header=</span>T)</a>
+<a class="sourceLine" id="cb1-2" title="2">aa &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;3. Data Sets/data_AcadAchiev.csv&quot;</span>, <span class="dt">header=</span>T)</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co">#set.seed = 806</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="kw">head</span>(aa)</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+ID
+</th>
+<th style="text-align:right;">
+Math01
+</th>
+<th style="text-align:right;">
+Math02
+</th>
+<th style="text-align:right;">
+Math03
+</th>
+<th style="text-align:right;">
+Portu01
+</th>
+<th style="text-align:right;">
+Portu02
+</th>
+<th style="text-align:right;">
+Portu03
+</th>
+<th style="text-align:left;">
+Sex
+</th>
+<th style="text-align:left;">
+Rel_status
+</th>
+<th style="text-align:left;">
+Guardian
+</th>
+<th style="text-align:left;">
+Reason
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+home
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+course
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+course
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The MICE program (Multiple Imputation by Chained Equations) can be used for basic multiple imputation procedures.</p>
+<p>We will use it with the Academic Achievement data (data set ‘aa’)</p>
+<p>To perform the MI use:</p>
+<p><code>imp_data = mice(aa, m = 40, seed = 142)</code></p>
+<p>We can view the results of one of the imputations using the complete() function (nested within the head() function so we don’t get the whole thing)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">head</span>(<span class="kw">complete</span>(imp_data, <span class="dv">1</span>))</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+ID
+</th>
+<th style="text-align:right;">
+Math01
+</th>
+<th style="text-align:right;">
+Math02
+</th>
+<th style="text-align:right;">
+Math03
+</th>
+<th style="text-align:right;">
+Portu01
+</th>
+<th style="text-align:right;">
+Portu02
+</th>
+<th style="text-align:right;">
+Portu03
+</th>
+<th style="text-align:left;">
+Sex
+</th>
+<th style="text-align:left;">
+Rel_status
+</th>
+<th style="text-align:left;">
+Guardian
+</th>
+<th style="text-align:left;">
+Reason
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+home
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+course
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+course
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">  <span class="co"># The complete function prints back the complete data set</span></a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="co"># The second argument (the &#39;1&#39; in this case) indicates which imputed data</span></a>
+<a class="sourceLine" id="cb3-3" title="3">  <span class="co"># we would like to view. Since we imputed 40, we can choose values 1-40.</span></a></code></pre></div>
+</div>
+<div id="part-2.-conducting-the-analyses" class="section level2">
+<h2>Part 2. Conducting the Analyses</h2>
+<div id="t-tests-using-the-car-package" class="section level3">
+<h3>t-tests using the car package</h3>
+<p>Now we can perform a t-test (via ANOVA) using some of the variables from the Academic Achievement data set. We will need the car package to calculate type 3 sums of squares.</p>
+<p>As an initial set, we need to make sure we are using an effect coding strategy. This detail is specific to ANOVA, not multiple imputation.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co">#adding this statement makes the results of ANOVA similar to those generated in standard packages like SPSS.</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">options</span>(<span class="dt">contrasts =</span> <span class="kw">c</span>(<span class="st">&#39;contr.sum&#39;</span>, <span class="st">&#39;contr.poly&#39;</span>))</a></code></pre></div>
+<p>Now lets fit the model that tests for biological sex differences across Math scores that were collected from the first semester. After fitting the model like a regression, we can use the Anova() function to get the ANOVA table from the output.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">model<span class="fl">.01</span> =<span class="st"> </span><span class="kw">lm</span>(Math01 <span class="op">~</span><span class="st"> </span>Sex, <span class="dt">data =</span> aa)</a>
+<a class="sourceLine" id="cb5-2" title="2"></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw">Anova</span>(model<span class="fl">.01</span>, <span class="dt">type =</span> <span class="dv">3</span>)</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Sum Sq
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+31987.14071
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2919.262676
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sex
+</td>
+<td style="text-align:right;">
+31.36543
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2.862523
+</td>
+<td style="text-align:right;">
+0.0918406
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residuals
+</td>
+<td style="text-align:right;">
+2903.67577
+</td>
+<td style="text-align:right;">
+265
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co">#use summary() to get information on missingness in the original data</span></a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="kw">summary</span>(model<span class="fl">.01</span>)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Math01 ~ Sex, data = aa)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -6.6087 -2.6087 -0.6087  2.3913  8.3913 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  10.9516     0.2027  54.030   &lt;2e-16 ***
+## Sex1         -0.3429     0.2027  -1.692   0.0918 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.31 on 265 degrees of freedom
+##   (115 observations deleted due to missingness)
+## Multiple R-squared:  0.01069,    Adjusted R-squared:  0.006953 
+## F-statistic: 2.863 on 1 and 265 DF,  p-value: 0.09184</code></pre>
+<p>Just to follow up, we can also perform a t-test using the sample data.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">t.test</span>(Math01 <span class="op">~</span><span class="st"> </span>Sex, <span class="dt">data =</span> aa)</a></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Math01 by Sex
+## t = -1.6896, df = 261.96, p-value = 0.09229
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -1.4851991  0.1134431
+## sample estimates:
+## mean in group F mean in group M 
+##        10.60870        11.29457</code></pre>
+</div>
+<div id="performing-a-t-test-via-anova-with-multiply-imputed-data-sets" class="section level3">
+<h3>Performing a t-test (via ANOVA) with Multiply Imputed Data Sets</h3>
+<p>First we impute the data using:</p>
+<p><code>imp_data2 = mice(aa, m = 40, seed = 142)</code></p>
+<p>Quick check of the imputed data:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">head</span>(<span class="kw">complete</span>(imp_data2, <span class="dv">1</span>))</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+ID
+</th>
+<th style="text-align:right;">
+Math01
+</th>
+<th style="text-align:right;">
+Math02
+</th>
+<th style="text-align:right;">
+Math03
+</th>
+<th style="text-align:right;">
+Portu01
+</th>
+<th style="text-align:right;">
+Portu02
+</th>
+<th style="text-align:right;">
+Portu03
+</th>
+<th style="text-align:left;">
+Sex
+</th>
+<th style="text-align:left;">
+Rel_status
+</th>
+<th style="text-align:left;">
+Guardian
+</th>
+<th style="text-align:left;">
+Reason
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+home
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+course
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+yes
+</td>
+<td style="text-align:left;">
+other
+</td>
+<td style="text-align:left;">
+reputation
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+no
+</td>
+<td style="text-align:left;">
+mother
+</td>
+<td style="text-align:left;">
+course
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Perform the analysis on each of the imputed data sets with the ‘mi.anova()’ function from the ‘miceadds’ library.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">options</span>(<span class="dt">contrasts =</span> <span class="kw">c</span>(<span class="st">&#39;contr.sum&#39;</span>, <span class="st">&#39;contr.poly&#39;</span>))</a>
+<a class="sourceLine" id="cb11-2" title="2">anova2&lt;-<span class="kw">mi.anova</span>(<span class="dt">mi.res =</span> imp_data2, </a>
+<a class="sourceLine" id="cb11-3" title="3">        <span class="dt">formula =</span> <span class="st">&quot;Math01 ~ 1 + Sex&quot;</span>, </a>
+<a class="sourceLine" id="cb11-4" title="4">        <span class="dt">type =</span> <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## Univariate ANOVA for Multiply Imputed Data (Type 3)  
+## 
+## lm Formula:  Math01 ~ 1 + Sex
+## R^2=0.02 
+## ..........................................................................
+## ANOVA Table 
+##                 SSQ df1      df2 F value  Pr(&gt;F)    eta2 partial.eta2
+## Sex        85.94995   1 6839.481   7.088 0.00778 0.01998      0.01998
+## Residual 4215.18304  NA       NA      NA      NA      NA           NA</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">kable</span>(anova2)</a></code></pre></div>
+<table class="kable_wrapper">
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.0199831
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+SSQ
+</th>
+<th style="text-align:right;">
+df1
+</th>
+<th style="text-align:right;">
+df2
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+<th style="text-align:right;">
+eta2
+</th>
+<th style="text-align:right;">
+partial.eta2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Sex
+</td>
+<td style="text-align:right;">
+85.94995
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6839.481
+</td>
+<td style="text-align:right;">
+7.088
+</td>
+<td style="text-align:right;">
+0.007778
+</td>
+<td style="text-align:right;">
+0.019983
+</td>
+<td style="text-align:right;">
+0.019983
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residual
+</td>
+<td style="text-align:right;">
+4215.18304
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="practice-problem-using-mi-with-salary-data" class="section level3">
+<h3>Practice problem: Using MI with salary data</h3>
+<p>Using the salary data set:</p>
+<p>Perform a t-test on salary using biological sex as a predictor Create multiply imputed data sets (use 40 imputations, set the seed equal to 806) Perform the t-test across all data sets Combine the results across data sets</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co">#perform the t test</span></a>
+<a class="sourceLine" id="cb14-2" title="2">tprac &lt;-<span class="st"> </span><span class="kw">t.test</span>(salary <span class="op">~</span><span class="st"> </span>BioSex, <span class="dt">data =</span> salary)</a>
+<a class="sourceLine" id="cb14-3" title="3">tprac</a></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  salary by BioSex
+## t = -0.42543, df = 58.688, p-value = 0.6721
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -8758.271  5687.361
+## sample estimates:
+## mean in group F mean in group M 
+##        98438.25        99973.70</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">anovaprac =<span class="kw">lm</span>(salary <span class="op">~</span><span class="st"> </span>BioSex, <span class="dt">data =</span> salary)</a>
+<a class="sourceLine" id="cb16-2" title="2"></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="kw">Anova</span>(anovaprac, <span class="dt">type =</span> <span class="dv">3</span>)</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Sum Sq
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+652934818077
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2912.7660488
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BioSex
+</td>
+<td style="text-align:right;">
+39102846
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.1744392
+</td>
+<td style="text-align:right;">
+0.6775122
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residuals
+</td>
+<td style="text-align:right;">
+15243094325
+</td>
+<td style="text-align:right;">
+68
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Impute the data using: <code>imp_data.prac &lt;- mice(salary, m=40, seed=806)</code></p>
+<p>Perform the t test across all imputed data sets (using Anova), and combine them using mi.anova() function:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">options</span>(<span class="dt">contrasts =</span> <span class="kw">c</span>(<span class="st">&#39;contr.sum&#39;</span>, <span class="st">&#39;contr.poly&#39;</span>))</a>
+<a class="sourceLine" id="cb17-2" title="2">anovapracMI&lt;-<span class="kw">mi.anova</span>(<span class="dt">mi.res =</span> imp_data.prac, </a>
+<a class="sourceLine" id="cb17-3" title="3">        <span class="dt">formula =</span> <span class="st">&quot;salary ~ 1 + BioSex&quot;</span>, </a>
+<a class="sourceLine" id="cb17-4" title="4">        <span class="dt">type =</span> <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## Univariate ANOVA for Multiply Imputed Data (Type 3)  
+## 
+## lm Formula:  salary ~ 1 + BioSex
+## R^2=0.0038 
+## ..........................................................................
+## ANOVA Table 
+##                  SSQ df1      df2 F value  Pr(&gt;F)    eta2 partial.eta2
+## BioSex      82139648   1 3481.781  0.2335 0.62899 0.00385      0.00385
+## Residual 21270000828  NA       NA      NA      NA      NA           NA</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="kw">kable</span>(anovapracMI)</a></code></pre></div>
+<table class="kable_wrapper">
+<tbody>
+<tr>
+<td>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+0.0038469
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+SSQ
+</th>
+<th style="text-align:right;">
+df1
+</th>
+<th style="text-align:right;">
+df2
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+<th style="text-align:right;">
+eta2
+</th>
+<th style="text-align:right;">
+partial.eta2
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+BioSex
+</td>
+<td style="text-align:right;">
+82139648
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3481.781
+</td>
+<td style="text-align:right;">
+0.2335
+</td>
+<td style="text-align:right;">
+0.628993
+</td>
+<td style="text-align:right;">
+0.003847
+</td>
+<td style="text-align:right;">
+0.003847
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residual
+</td>
+<td style="text-align:right;">
+21270000828
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="part-3.-doing-other-anovas-including-two-way-anova-in-mi" class="section level2">
+<h2>Part 3. Doing other ANOVAs (including two-way ANOVA) in MI</h2>
+<p>As an initial set, we need to make sure we are using an effect coding strategy. This detail is specific to ANOVA, not multiple imputation.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">options</span>(<span class="dt">contrasts =</span> <span class="kw">c</span>(<span class="st">&#39;contr.sum&#39;</span>, <span class="st">&#39;contr.poly&#39;</span>))</a></code></pre></div>
+<p>Now lets fit the two-way model that tests for guardian differences by Sex across Math scores that were collected from the first semester.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1">model<span class="fl">.03</span> =<span class="st"> </span><span class="kw">lm</span>(Math01 <span class="op">~</span><span class="st"> </span>Guardian <span class="op">+</span><span class="st"> </span>Sex <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb21-2" title="2"><span class="st">                </span>Guardian <span class="op">*</span><span class="st"> </span>Sex, </a>
+<a class="sourceLine" id="cb21-3" title="3">              <span class="dt">data =</span> aa)</a>
+<a class="sourceLine" id="cb21-4" title="4"></a>
+<a class="sourceLine" id="cb21-5" title="5"><span class="co">#this drops 115 cases</span></a>
+<a class="sourceLine" id="cb21-6" title="6"><span class="kw">Anova</span>(model<span class="fl">.03</span>, <span class="dt">type =</span> <span class="dv">3</span>)</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Sum Sq
+</th>
+<th style="text-align:right;">
+Df
+</th>
+<th style="text-align:right;">
+F value
+</th>
+<th style="text-align:right;">
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+10157.636245
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+936.7339101
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Guardian
+</td>
+<td style="text-align:right;">
+62.423324
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2.8783293
+</td>
+<td style="text-align:right;">
+0.0580154
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sex
+</td>
+<td style="text-align:right;">
+25.022233
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2.3075422
+</td>
+<td style="text-align:right;">
+0.1299579
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Guardian:Sex
+</td>
+<td style="text-align:right;">
+4.810075
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.2217918
+</td>
+<td style="text-align:right;">
+0.8012330
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residuals
+</td>
+<td style="text-align:right;">
+2830.198663
+</td>
+<td style="text-align:right;">
+261
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Now to run the MI and compare the results.</p>
+<p>Using the following code: <code>imp_data3 &lt;- mice(aa, m=40, seed=142)</code></p>
+<p>Perform the analysis on each of the imputed data sets with the ‘mi.anova()’ function from the ‘miceadds’ library.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">mi.anova</span>(<span class="dt">mi.res =</span> imp_data3, </a>
+<a class="sourceLine" id="cb22-2" title="2">        <span class="dt">formula =</span> <span class="st">&quot;Math01 ~ 1 + Guardian + Sex + Guardian*Sex&quot;</span>, </a>
+<a class="sourceLine" id="cb22-3" title="3">        <span class="dt">type =</span> <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>## Univariate ANOVA for Multiply Imputed Data (Type 3)  
+## 
+## lm Formula:  Math01 ~ 1 + Guardian + Sex + Guardian*Sex
+## R^2=0.0284 
+## ..........................................................................
+## ANOVA Table 
+##                     SSQ df1      df2 F value  Pr(&gt;F)    eta2 partial.eta2
+## Guardian       50.70465   2 30568.98  2.1910 0.11182 0.01192      0.01212
+## Sex            54.89645   1 37976.04  4.7974 0.02851 0.01291      0.01311
+## Guardian:Sex   15.10919   2 49344.50  0.6391 0.52776 0.00355      0.00364
+## Residual     4131.92524  NA       NA      NA      NA      NA           NA</code></pre>
+<p><code>Univariate ANOVA for Multiply Imputed Data (Type 3)</code></p>
+<p><code>lm Formula:  Math01 ~ 1 + Guardian + Sex + Guardian*Sex</code> <code>R^2=0.0284</code> <code>..........................................................................</code> <code>ANOVA Table</code> <code>SSQ df1      df2 F value  Pr(&gt;F)    eta2 partial.eta2</code> <code>Guardian       50.70465   2 30568.98  2.1910 0.11182 0.01192      0.01212</code> <code>Sex            54.89645   1 37976.04  4.7974 0.02851 0.01291      0.01311</code> <code>Guardian:Sex   15.10919   2 49344.50  0.6391 0.52776 0.00355      0.00364</code> <code>Residual     4131.92524  NA       NA      NA      NA      NA           NA</code></p>
+</div>
+<div id="part-4.-correlations-with-mi" class="section level2">
+<h2>Part 4. Correlations with MI</h2>
+<p>We can start by calculating a correlation across two variables</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">cor.test</span>(aa<span class="op">$</span>Math01, aa<span class="op">$</span>Math02, <span class="dt">use =</span> <span class="st">&#39;pairwise.complete.obs&#39;</span>)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  aa$Math01 and aa$Math02
+## t = 24.486, df = 177, p-value &lt; 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.8403011 0.9082913
+## sample estimates:
+##       cor 
+## 0.8786774</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="co"># Remember this is still doing listwise deletion in the bivariate case, even though the use statement says pairwise.</span></a></code></pre></div>
+<p>Now we can run a combined correlation across the MI data sets we generated in Part 3 above.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1">corrMI &lt;-<span class="st"> </span><span class="kw">micombine.cor</span>(<span class="dt">mi.res =</span> imp_data3, </a>
+<a class="sourceLine" id="cb27-2" title="2">                  <span class="dt">variables =</span> <span class="kw">c</span>(<span class="st">&#39;Math01&#39;</span>, <span class="st">&#39;Math02&#39;</span>))</a>
+<a class="sourceLine" id="cb27-3" title="3"><span class="kw">kable</span>(corrMI)</a></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+variable1
+</th>
+<th style="text-align:left;">
+variable2
+</th>
+<th style="text-align:right;">
+r
+</th>
+<th style="text-align:right;">
+rse
+</th>
+<th style="text-align:right;">
+fisher_r
+</th>
+<th style="text-align:right;">
+fisher_rse
+</th>
+<th style="text-align:right;">
+fmi
+</th>
+<th style="text-align:right;">
+t
+</th>
+<th style="text-align:right;">
+p
+</th>
+<th style="text-align:right;">
+lower95
+</th>
+<th style="text-align:right;">
+upper95
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Math01
+</td>
+<td style="text-align:left;">
+Math02
+</td>
+<td style="text-align:right;">
+0.8811656
+</td>
+<td style="text-align:right;">
+0.0171152
+</td>
+<td style="text-align:right;">
+1.380958
+</td>
+<td style="text-align:right;">
+0.0766292
+</td>
+<td style="text-align:right;">
+0.5574908
+</td>
+<td style="text-align:right;">
+18.02131
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.8428018
+</td>
+<td style="text-align:right;">
+0.9106209
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Math02
+</td>
+<td style="text-align:left;">
+Math01
+</td>
+<td style="text-align:right;">
+0.8811656
+</td>
+<td style="text-align:right;">
+0.0171152
+</td>
+<td style="text-align:right;">
+1.380958
+</td>
+<td style="text-align:right;">
+0.0766292
+</td>
+<td style="text-align:right;">
+0.5574908
+</td>
+<td style="text-align:right;">
+18.02131
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.8428018
+</td>
+<td style="text-align:right;">
+0.9106209
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="part-5.-regression-with-mi" class="section level2">
+<h2>Part 5. Regression with MI</h2>
+<p>Same basic process as above.</p>
+<p>First test the model with the observed data</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1">model<span class="fl">.5</span> &lt;-<span class="st"> </span><span class="kw">lm</span>(Math02 <span class="op">~</span><span class="st"> </span><span class="dv">1</span><span class="op">+</span><span class="st"> </span>Math01 <span class="op">+</span><span class="st"> </span>Portu01, <span class="dt">data=</span>aa)</a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="kw">summary</span>(model<span class="fl">.5</span>)              </a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Math02 ~ 1 + Math01 + Portu01, data = aa)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -11.4305  -0.8456  -0.0402   0.9966   4.5778 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -0.38681    0.77343  -0.500   0.6179    
+## Math01       0.86714    0.05984  14.490   &lt;2e-16 ***
+## Portu01      0.14116    0.07807   1.808   0.0731 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.672 on 122 degrees of freedom
+##   (257 observations deleted due to missingness)
+## Multiple R-squared:  0.7629, Adjusted R-squared:  0.759 
+## F-statistic: 196.3 on 2 and 122 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>We use the <code>with()</code> function to run this model across all the MI data sets stored in the <code>imp_data3</code> list we made earlier in Part 3.</p>
+<p><code>results = with(imp_data3, lm(Math02 ~ 1+ Math01 + Portu01))</code></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1">results =<span class="st"> </span><span class="kw">with</span>(imp_data3, <span class="kw">lm</span>(Math02 <span class="op">~</span><span class="st"> </span><span class="dv">1</span><span class="op">+</span><span class="st"> </span>Math01 <span class="op">+</span><span class="st"> </span>Portu01))</a>
+<a class="sourceLine" id="cb30-2" title="2"><span class="kw">summary</span>(<span class="kw">pool</span>(results))</a></code></pre></div>
+<div class="kable-table">
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+estimate
+</th>
+<th style="text-align:right;">
+std.error
+</th>
+<th style="text-align:right;">
+statistic
+</th>
+<th style="text-align:right;">
+df
+</th>
+<th style="text-align:right;">
+p.value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+-0.8268730
+</td>
+<td style="text-align:right;">
+0.5957985
+</td>
+<td style="text-align:right;">
+-1.38784
+</td>
+<td style="text-align:right;">
+86.40788
+</td>
+<td style="text-align:right;">
+0.1687541
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Math01
+</td>
+<td style="text-align:right;">
+0.9075514
+</td>
+<td style="text-align:right;">
+0.0429691
+</td>
+<td style="text-align:right;">
+21.12103
+</td>
+<td style="text-align:right;">
+106.55834
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Portu01
+</td>
+<td style="text-align:right;">
+0.1368116
+</td>
+<td style="text-align:right;">
+0.0599034
+</td>
+<td style="text-align:right;">
+2.28387
+</td>
+<td style="text-align:right;">
+80.92820
+</td>
+<td style="text-align:right;">
+0.0250000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 

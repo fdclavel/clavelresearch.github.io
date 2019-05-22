@@ -1,0 +1,84 @@
+---
+title: "Public Github Repository" 
+subtitle: "Fred Clavel, Ph.D."
+output:
+  html_document:
+    theme: yeti
+    highlight: kate
+    code_folding: show
+    toc: TRUE
+    toc_depth: 3
+    toc_float: TRUE
+
+---
+
+- [Website](http://clavelresearch.wordpress.com)
+- [Github](http://github.com/fdclavel)
+- [Twitter](http://twitter.com/fdclavel)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=F, message=F)
+```
+
+***
+*Github repository for supplemental instruction files, including data sets, lab notes, syntax files and scripts, and custom authored learning and data analytic tools.*
+
+# **Tools** {.tabset .tabset-fade .tabset-pills}
+
+## SPSS
+
+
+## SAS
+
+
+## Mplus
+
+- Mplus Coefficient Cruncher
+- Mplus Model Fit Aggregator
+
+## R
+
+## Excel
+
+
+
+# **Lab Notes and Scrawlings** {.tabset .tabset-fade .tabset-pills}
+
+## UCSD SIO Stats (Winter 2019)
+
+**R Lab Notes (from UC San Diego SIO Advanced R Stats Course)**
+ 
+- [Lab 1 - Quick Breakdown: Getting Started in R Markdown](lab1.html)
+- [Lab 2 - Using "for" loops](lab2.html)
+- [Lab 3 - Data Manipulation using *dplyr*](lab3.html)
+- [Lab 4 - Visualizing Data](lab4.html)
+- [Lab 5 - ANCOVA pt 1](lab5.html)
+- [Lab 6 - ANCOVA pt 2](lab6.html)
+- [Lab 7 - Worklow and Organization](lab7.html)
+- [Lab 8 - Regression and Maximon Likelihood Example](lab8.html)
+
+
+# **Workshop Materials** {.tabset .tabset-fade .tabset-pills}
+
+## Missing Data in R (SDSU/UCSD - May 2019)
+
+This was an 8-hour intensive workshop on missing data concepts and working with practical examples of missingness via multiple imputation procedures in R.
+
+Relevant files include:
+
+- [Workshop Notes and Aggregated R Scripts](workshops-missdata/index.html)
+- [Lecture Slides pt 1 (pdf)](workshops-missdata/LectureSlides/Lecture 1 - Concepts of Missingness (4 slides).pdf)
+- [Lecture Slides pt 2 (pdf)](workshops-missdata/LectureSlides/Lecture 2 - Multiple Imputation (4 slides).pdf)<br>
+<br>
+- Full R Scripts <br>
+---- [1. Basics of Imputation](workshops-missdata/R Syntax/1._Basics_of_Imputation.html) <br>
+---- [2. t-Tests using MICE](workshops-missdata/R Syntax/2._t-tests_in_MICE.html) <br>
+---- [3. ANOVA using MICE](workshops-missdata/R Syntax/3._ANOVA_in_MICE.html) <br>
+---- [4. Correlations with MICE](workshops-missdata/R Syntax/4._Correlations_with_MICE.html) <br>
+---- [5. Regresison with MICE](workshops-missdata/R Syntax/5._Regression_with_MICE.html) <br>
+<br>
+- Simulated data sets (right click to download) <br>
+---- [Salary Data from Fictional Professors](workshops-missdata/Data Sets/data_salary.csv) <br>
+---- [Fictional Academic Achievement Data](workshops-missdata/Data Sets/data_AcadAchiev.csv) <br>
+
+  

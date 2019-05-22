@@ -1,0 +1,384 @@
+---
+title: "Missing Data Workshop (Jon Helm, Ph.D.)"
+author: "Fred Clavel"
+date: "5/17/2019"
+output: 
+ html_document:
+    theme: yeti
+    highlight: kate
+    code_folding: show
+    toc: TRUE
+    toc_float: true
+    toc_depth: 3
+    df_print: kable
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning =FALSE, message = FALSE)
+```
+
+**Sites for more info:** <br>
+- [Jon Helm](jonhelm.org)
+
+# Notes from Jon's Lecture Slides
+
+## Sampling and how it links to the problem of missing data
+
+Scientific process involves random sampling. When we have missingness, randoom sampling assumption is violated. Generalizability is undermined as a result.
+
+Performing deletion methods essentially gives us a non-random sample of a random sample. Once we get to this point, we can no longer generalize to the population. *Listwise deletion* makes this a problem because it is too aggressive (though *pairwise deletion* also presents issues too).
+
+Most data analytic programs will perform listwise deletion before conducting standard analytic procedures (and will not necessarily inform you, or will bury it in the footnotes of the output). Be careful, because listwise deletion always assumes MCAR. If the data are MAR or NMAR, you obtain biased estimates.
+
+
+## Patterns of missingness
+
+- Univariate (uncommon)
+- General (missing on more than one variable, typically non-monotonic)
+
+## Causes and Mechanisms of missingness
+
+### CAUSES
+
+- True reason (not the assumed reason) that data are missing
+
+### MECHANISMS
+
+**MCAR: Missing completely at random **
+
+- Missingness on Y is unrelated to the expected Y; unrelated to any observed Xs.
+- When we run analyses without first accounting for missingness, we are inherently assuming MCAR (**which may be wrong**).
+- Unfortunately, MCAR can never be truly known, because we would need the actual complete data to test the first part of the assumption (that Y miss is unrelated to Y complete)
+
+**MAR: Missing at random**
+
+- Missingness on Y is unrelated to the expected Y, after adjusting for Xs (which are related; i.e., there is some variable in the analysis that can account for the missingness).
+- We can test this by seeing whether missingness indicators are related to the observed Xs in the data.
+- This has shortcomings too however, particularly when dealing with multivariate missingness (it creates exponential patterns, which drastically reduces power and sample size for any MAR testing, and inflates Type 1 error due to multiple tests [e.g., even with 3 variables, we can have 8 patterns of missingness - i.e., 8 subgroups to test against each other])
+- This can never be known either, because we still need the complete data to know whether Ymiss is unrelated to Ycomplete
+
+
+**NMAR/MNAR: Not Missing at Random/Missing Not at Random**
+
+- Missingness on Y is related to the expected Y, after adjusting for Xs (which are related; i.e., regardless of other variables in the analysis, Y is still missing because of what Y *would have been*).
+- This can never be known for certain either (in all cases you need complete data).
+
+***
+
+**QUESTION** -- Is there any empirical way to test/estimate the standard (or expected) rate of missingness for a particular variable in a particular population?
+
+An issue related to power.  It matters more WHY they're missing, even if you expect the missingness, you are still making assumptions about why (one of the mechanisms above) - and so are all prior studies from which you derive the expected missingness value (e.g., diary studies assume 80% retention/20% attrition, generally due to boredom or fatigue).
+
+***
+
+# Imputation Strategies
+
+## Single Imputation
+
+- Replacing missing values with a best guess
+- Different approaches to this process include (but are not limited to):<br>
+*:::: Mean imputation* <br>
+*:::: Hot deck imputation, Cold deck imputation* <br>
+*:::: LOCF, NOCB, or Sandwich methods* <br>
+*:::: Regression-based imputation* <br>
+
+- Not as widely used, presents issues - generally more benefits than drawbacks <br>
+*:::: Regression based single imputation doesn't include stochastic elements such as the standard errors of the estimates, and the residual of the model.* <br>
+*:::: Multiple imputation helps include some of this stochastic information.* <br>
+
+## Multiple Imputation
+
+- Averaging betas across multiple imputed data sets.
+- Standard errors are handled differently:
+:::: variability WITHIN imputation - average of squares of se (variacnes wihtin each imputation)
+:::: variability BETWEEN imputations
+::::::: We calculate them (see slides for example):
+
+within = SE1sq + SE2sq / N-imputations 
+
+between = var(M1, M2, M3) 
+
+V-b0 =  W + ( 1 + (1/M)) B
+
+se-b0 = SQRT(Vb0)
+
+***
+
+**QUESTION** -- Would it be appropriate to conduct beta comparisons across imputed vs. observed groups (assuming sufficiently large subgroups), to determine whether you are getting particularly different estimates from original data (e.g., a Wald test)? If we don't test, how do we know that imputation is giving us the results we actually want?
+
+**QUESTION** -- Do you get different results when using a bootstrapping approach (as MI normally does) vs. a simulation approach (i.e., guesses based on the population estimates derived from the data)? This can be tested, no?
+ 
+***
+
+**Multiple Imputation software RARELY uses multiple regression to conduct the procedure in practice. It's a bit more technical and is based on multivariate normality.**
+
+Typically, Multiple imputation will perform well if one of the variables in the imputation accounts for the missingness (i.e., the data are MAR).
+- When data are MAR, one of the X variables really does explain scores on Y, so if that X is in the MI model, the best guesses will be pretty good.
+
+Typically, it also works if missingness is not related to any variable in the data set (i.e., the data are MCAR)
+
+**It does NOT work well if you have NMAR data.**
+- MI will produced biased guesses with NMAR data because your complete observations are a non-random sample of a random sample.
+
+
+
+
+
+
+# Data Analysis
+
+## Part 1. Imputing the Data
+
+
+Start by importing the data.
+
+```{r mount packages, include=FALSE}
+library(car)
+library(mice)
+library(miceadds)
+library(kableExtra)
+```
+
+
+```{r import data}
+salary <- read.csv("3. Data Sets/data_salary.csv", header=T)
+aa <- read.csv("3. Data Sets/data_AcadAchiev.csv", header=T)
+#set.seed = 806
+head(aa)
+
+```
+
+The MICE program (Multiple Imputation by Chained Equations) can be used for basic multiple imputation procedures. 
+
+
+We will use it with the Academic Achievement data (data set 'aa')
+
+To perform the MI use:
+
+`imp_data = mice(aa, m = 40, seed = 142)`
+
+```{r conducting MI with the aa data, include =FALSE}
+
+imp_data = mice(aa, m = 40, seed = 142)
+
+
+
+    # This will create 40 imputed data sets to fill in the missing
+    # values from the data set 'data_AcadAchiev'
+
+    # If we set the seed value (Jon recommends this), then we will
+    # reproduce the results if we rerun the imputation
+
+# by default it appears to conduct 5 runs.
+
+```
+
+
+
+We can view the results of one of the imputations using the complete() function (nested within the head() function so we don't get the whole thing)
+
+```{r view the first iteration of imputed data}
+head(complete(imp_data, 1))
+
+  # The complete function prints back the complete data set
+  # The second argument (the '1' in this case) indicates which imputed data
+  # we would like to view. Since we imputed 40, we can choose values 1-40.
+```
+
+
+
+## Part 2. Conducting the Analyses
+
+### t-tests using the car package
+
+Now we can perform a t-test (via ANOVA) using some of the variables from the Academic Achievement data set. We will need the car package to calculate type 3 sums of squares.
+
+As an initial set, we need to make sure we are using an effect coding strategy. This detail is specific to ANOVA, not multiple imputation.
+
+``` {r implement effects coding for ANOVA}
+#adding this statement makes the results of ANOVA similar to those generated in standard packages like SPSS.
+options(contrasts = c('contr.sum', 'contr.poly'))
+```
+
+
+Now lets fit the model that tests for biological sex differences across Math scores that were collected from the first semester. After fitting the model like a regression, we can use the Anova() function to get the ANOVA table from the output.
+
+```{r ANOVA 1}
+model.01 = lm(Math01 ~ Sex, data = aa)
+
+Anova(model.01, type = 3)
+
+#use summary() to get information on missingness in the original data
+summary(model.01)
+```
+
+Just to follow up, we can also perform a t-test using the sample data.
+
+``` {r t-test of ANOVA 1}
+t.test(Math01 ~ Sex, data = aa)
+
+```
+
+### Performing a t-test (via ANOVA) with Multiply Imputed Data Sets
+
+First we impute the data using:
+
+`imp_data2 = mice(aa, m = 40, seed = 142)`
+
+```{r impute new data,  include = FALSE}
+imp_data2 <- mice(aa, m=40, seed=111)
+
+```
+
+Quick check of the imputed data:
+
+```{r check the data}
+head(complete(imp_data2, 1))
+```
+
+Perform the analysis on each of the imputed data sets with the ‘mi.anova()’ function from the ‘miceadds’ library.
+```{r ANOVA across MI data sets}
+options(contrasts = c('contr.sum', 'contr.poly'))
+anova2<-mi.anova(mi.res = imp_data2, 
+        formula = "Math01 ~ 1 + Sex", 
+        type = 3)
+kable(anova2)
+```
+
+
+### Practice problem: Using MI with salary data
+
+Using the salary data set:
+
+    Perform a t-test on salary using biological sex as a predictor
+    Create multiply imputed data sets (use 40 imputations, set the seed equal to 806)
+    Perform the t-test across all data sets
+    Combine the results across data sets
+
+```{r prac1 t test}
+#perform the t test
+tprac <- t.test(salary ~ BioSex, data = salary)
+tprac
+
+anovaprac =lm(salary ~ BioSex, data = salary)
+
+Anova(anovaprac, type = 3)
+
+```
+
+Impute the data using:
+`imp_data.prac <- mice(salary, m=40, seed=806)`
+
+```{r prac2 impute data, include = FALSE}
+imp_data.prac <- mice(salary, m=40, seed=806)
+```
+
+
+Perform the t test across all imputed data sets (using Anova), and combine them using mi.anova() function:
+
+```{r prac3 anova across MI sets}
+options(contrasts = c('contr.sum', 'contr.poly'))
+anovapracMI<-mi.anova(mi.res = imp_data.prac, 
+        formula = "salary ~ 1 + BioSex", 
+        type = 3)
+kable(anovapracMI)
+```
+
+
+
+## Part 3. Doing other ANOVAs (including two-way ANOVA) in MI
+
+As an initial set, we need to make sure we are using an effect coding strategy. This detail is specific to ANOVA, not multiple imputation.
+```{r}
+options(contrasts = c('contr.sum', 'contr.poly'))
+```
+Now lets fit the two-way model that tests for guardian differences by Sex across Math scores that were collected from the first semester.
+
+```{r two way anova with AA data}
+model.03 = lm(Math01 ~ Guardian + Sex + 
+                Guardian * Sex, 
+              data = aa)
+
+#this drops 115 cases
+Anova(model.03, type = 3)
+
+```
+
+
+Now to run the MI and compare the results.
+
+Using the following code:
+`imp_data3 <- mice(aa, m=40, seed=142)`
+
+
+```{r impute the data, include=FALSE}
+imp_data3 <- mice(aa, m=40, seed=142)
+```
+
+Perform the analysis on each of the imputed data sets with the ‘mi.anova()’ function from the ‘miceadds’ library.
+```{r anova across MI sets pt 3}
+
+mi.anova(mi.res = imp_data3, 
+        formula = "Math01 ~ 1 + Guardian + Sex + Guardian*Sex", 
+        type = 3)
+```
+
+
+`Univariate ANOVA for Multiply Imputed Data (Type 3)  `
+
+`lm Formula:  Math01 ~ 1 + Guardian + Sex + Guardian*Sex`
+`R^2=0.0284 `
+`..........................................................................`
+`ANOVA Table `
+`                    SSQ df1      df2 F value  Pr(>F)    eta2 partial.eta2`
+`Guardian       50.70465   2 30568.98  2.1910 0.11182 0.01192      0.01212`
+`Sex            54.89645   1 37976.04  4.7974 0.02851 0.01291      0.01311`
+`Guardian:Sex   15.10919   2 49344.50  0.6391 0.52776 0.00355      0.00364`
+`Residual     4131.92524  NA       NA      NA      NA      NA           NA`
+
+## Part 4. Correlations with MI
+
+We can start by calculating a correlation across two variables
+
+```{r basic correlation}
+cor.test(aa$Math01, aa$Math02, use = 'pairwise.complete.obs')
+
+# Remember this is still doing listwise deletion in the bivariate case, even though the use statement says pairwise.
+```
+
+Now we can run a combined correlation across the MI data sets we generated in Part 3 above.
+
+```{r correlation across all imputed data sets}
+corrMI <- micombine.cor(mi.res = imp_data3, 
+                  variables = c('Math01', 'Math02'))
+kable(corrMI)
+```
+
+
+
+## Part 5. Regression with MI
+
+Same basic process as above.
+
+First test the model with the observed data
+```{r standard linear model lm with obs data}
+model.5 <- lm(Math02 ~ 1+ Math01 + Portu01, data=aa)
+summary(model.5)              
+```
+
+We use the `with()` function to run this model across all the MI data sets stored in the `imp_data3` list we made earlier in Part 3.
+
+
+`results = with(imp_data3, lm(Math02 ~ 1+ Math01 + Portu01))`
+```{r pooled model across all MI data sets}
+results = with(imp_data3, lm(Math02 ~ 1+ Math01 + Portu01))
+summary(pool(results))
+```
+
+
+
+
+
+
+
