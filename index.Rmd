@@ -54,8 +54,8 @@ knitr::opts_chunk$set(echo = TRUE, warning=F, message=F)
 - [Lab 4 - Visualizing Data](lab4.html)
 - [Lab 5 - ANCOVA pt 1](lab5.html)
 - [Lab 6 - ANCOVA pt 2](lab6.html)
-- [Lab 7 - Worklow and Organization](lab7.html)
-- [Lab 8 - Regression and Maximon Likelihood Example](lab8.html)
+- [Lab 7 - Workflow and Organization](lab7.html)
+- [Lab 8 - Regression and Maximum Likelihood Example](lab8.html)
 
 
 # **Workshop Materials** {.tabset .tabset-fade .tabset-pills}
