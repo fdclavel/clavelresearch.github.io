@@ -12,7 +12,7 @@ output:
 
 ---
 
-- [Website](http://clavelresearch.wordpress.com)
+- [Website](http://fredclavel.org)
 - [Github](http://github.com/fdclavel)
 - [Twitter](http://twitter.com/fdclavel)
 
