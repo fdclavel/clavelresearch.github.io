@@ -1,6 +1,6 @@
 ---
-title: "Alpha and Power Sim"
-author: "Fred Clavel"
+title: "Multiple Sample and Tests Simulation"
+author: "Fred Clavel, Ph.D."
 date: "11 Mar 2021"
 output:
   html_document:
@@ -12,6 +12,12 @@ output:
     toc_depth: 3
     df_print: kable
 ---
+
+- [Website](http://fredclavel.org)
+- [Github](http://github.com/fdclavel)
+- [Twitter](http://twitter.com/fdclavel)
+
+*[Back to repository home](index.html)*
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning=F, message=F)
