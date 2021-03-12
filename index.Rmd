@@ -27,16 +27,21 @@ knitr::opts_chunk$set(echo = TRUE, warning=F, message=F)
 
 ## SPSS
 
+- [SPSS Correlation Tabulator](https://fredclavel.org/2013/12/30/spss-correlation-tabulator-v-1-4/)
+- [SPSS Regression Tabulator](https://fredclavel.org/2013/12/24/spss-regression-tabulator-v-2-2/)
 
 ## SAS
 
 
 ## Mplus
 
-- Mplus Coefficient Cruncher
-- Mplus Model Fit Aggregator
+- [Mplus Coefficient Cruncher](https://fredclavel.org/2014/05/28/mplus-coefficient-cruncher-v-1-4/)
+- [Mplus Model Fit Aggregator](https://fredclavel.org/2014/05/10/model-fit-aggregator-v2-1/)
 
 ## R
+
+- [Simulating Correlated Multivariate Normal Data (tutorial and script)](https://fredclavel.org/2019/04/17/simulating-correlated-multivariate-data/)
+- [Simulating multiple tests from a population for alpha or power demonstrations (tutorial and code chunks)](multiple-tests.html)
 
 ## Excel
 
