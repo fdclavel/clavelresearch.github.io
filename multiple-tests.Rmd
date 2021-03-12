@@ -1,0 +1,149 @@
+---
+title: "Alpha and Power Sim"
+author: "Fred Clavel"
+date: "11 Mar 2021"
+output:
+  html_document:
+    theme: yeti
+    highlight: kate
+    code_folding: show
+    toc: TRUE
+    toc_float: true
+    toc_depth: 3
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=F, message=F)
+library(kableExtra)
+```
+
+## Introduction
+
+The purpose of this script is to enable demonstrations of the effects of essential characteristics of data on the significance of a test and the power to detect an effect.
+
+It is designed to simulate data and allow for the following:
+
+- Adjustment of number of data sets (default is 100)
+- Adjustment of sample size per data set (each is a considered a random redraw from a population of 10,000) 
+- Adjustment of magnitude of effect (default is a correlation of r = .30 (medium effect) between 2 variables)
+
+Each adjustment above (particularly #2 and #3) will have an effect on alpha and power.
+
+Results will include a summarized figure detailing results of all tests across each data set, indicating which were statistically significant and which were not, based on their confidence intervals.
+
+
+## Package preparation
+
+This process requires the following packages
+
+```{r install/mount necessary packages}
+require(mvnorm)
+require(MASS)
+require(dplyr)
+require(ggplot2)
+```
+
+
+## Simulating data sets
+
+By default this program will simulate 100 data sets, each containing 100 random observations of two variables X1 and X2 drawn from a larger population of 10,000 people where the actual effect size is known to be r = .30. It will then run the bivariate correlation between X1 and X2 in each sample, and extract those correlation coefficients into a data frame containing the correlations and their confidence intervals.
+
+Each of these defaults can be adjusted by the user if desired. For a tutorial on adjusting the known correlation [please see my article here](https://fredclavel.org/2019/03/18/basics-standardization-and-the-z-score/)
+
+```{r Create the population of 10000}
+N <- 10000
+mu <- c(2,3)
+sigma <- matrix(c(9, 3.8, 3.8, 16),2,2)
+
+set.seed(03112021)
+pop.data <- data.frame(mvrnorm(n=N, mu=mu, Sigma=sigma))
+```
+
+
+## Define the adjustable parameters
+
+The two adjustable parameters defined here are :
+
+- *Nsampsize* = The sample size for each random sample (default is 100 observations)
+- *Nrandsamps* = The number of random samples of size **Nsampsize** to be drawn 
+
+```{r define the adjustable parameters}
+#define adjustable parameters
+Nsampsize = 100 #this is the size of each random sample (default 100)
+Nrandsamps = 100 #this is the number of random samples to be drawn (default 100)
+
+```
+
+## Draw the random samples from the population and run the tests
+
+This step uses a loop to repeatedly randomly draw **Nsampsize** observations from the population data **Nrandsamps** times, and then conduct the desired analysis and save each result to a new data set containing the results from each of the tests.
+
+
+
+```{r Simulate the 100 data sets and run and save a correlation for each}
+
+#create an empty list object to store the results of each test
+results = list()
+
+#use a for loop to extract coefficients and CI values
+for(i in 1:Nrandsamps) {
+  tempsample <- sample_n(pop.data, Nsampsize) 
+  tempcor <- cor.test(tempsample$X1, tempsample$X2)
+  CI  <- as.data.frame(tempcor$conf.int)
+  Rcoeff <- as.numeric(tempcor$estimate)
+  CIlow <- CI[1,1]
+  CIhigh <- CI[2,1]
+  tempdata <- data.frame(cbind(Rcoeff, CIlow, CIhigh))
+  
+  #add this iteration of tempdata to the results list
+  results[[i]] <- tempdata 
+  
+}
+
+  #bind all results into a single data frame
+	results.data = do.call(rbind, results)
+	
+```
+	
+	
+```{r create the bound data set and check the header info}		
+	#add the test numbers to the data set.
+	testnum = seq(1,nrow(results.data))
+	results.data<- cbind(testnum, results.data)
+
+	#view first 6 rows
+	head(results.data)
+
+```
+
+
+## Tabulating and Plotting the results
+
+This new data set can then be used to create a plot of significant vs nonsignificant correlation tests, based on the confidence intervals for each correlation coefficient. We can create a table and plot to demonstrate the percentage of tests where the confidence limits contain zero (or conversely those that do not).
+
+
+```{r calculate percentages of significant results}
+
+#compute a variable to denote significance at p <.05
+results.data$sig <- NA
+results.data$sig [results.data$CIlow < 0 & results.data$CIhigh > 0] <- "Not Significant"
+results.data$sig [results.data$CIlow > 0 & results.data$CIhigh > 0] <- "Significant"
+results.data$sig [results.data$CIlow < 0 & results.data$CIhigh < 0] <- "Significant"
+
+table(results.data$sig)
+
+```
+```{r create a ggplot of the total results}
+
+coeff.plot <- ggplot(data = results.data, aes(x=testnum, y=Rcoeff, color=sig))+
+      geom_point()+
+      geom_errorbar(aes(ymin=CIlow, ymax=CIhigh))+
+      geom_hline(yintercept=0, size=1, color="darkgreen", alpha=.5)
+                      
+coeff.plot
+
+
+```
+
+
