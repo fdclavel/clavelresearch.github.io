@@ -3,6 +3,6 @@ Github-hosted scripts and files for supplemental instruction
 
 ## Description
 
-This repository hosts publicly available markdown files/scripts and knitted html documents. Public repo can be viewed at 
+This repository hosts publicly available markdown files/scripts and knitted html documents. Public repo can be viewed at: 
 
-[fdclavel.github.io](fdclavel.github.io)
+[fdclavel.github.io](https://fdclavel.github.io/index.html)
