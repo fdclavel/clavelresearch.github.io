@@ -57,7 +57,7 @@ require(tibble)
 
 By default this program will simulate 200 data sets, each containing 100 random observations of two variables X1 and X2 drawn from a larger population of 10,000 people where the actual effect size is known to be r = .30. It will then run the bivariate correlation between X1 and X2 in each sample, and extract those correlation coefficients into a data frame containing the correlations and their confidence intervals.
 
-Each of these defaults can be adjusted by the user if desired. For a tutorial on adjusting the known correlation [please see my article here](https://fredclavel.org/2019/03/18/basics-standardization-and-the-z-score/)
+Each of these defaults can be adjusted by the user if desired. For a tutorial on adjusting the known correlation [please see my article here](https://fredclavel.org/2019/04/17/simulating-correlated-multivariate-data/)
 
 ```{r Create the population of 10000}
 N <- 10000
@@ -264,16 +264,3 @@ N50.CIwidth
 
 In this case, the average width of the confidence intervals around the correlation estimates is different depending on the sample size. When the sample size was 100, the average width of the confidence interval was .36. However, when we cut the sample size in half, the average width of the confidence interval increased to .50.
 
-## Practical/teachable implications of power, sample size, and NHST
-
-What we've just seen has a couple of practical implications that help us understand why power matters and why NHST is a problematic standard in research.
-
-1. With an average CI width of .50, this means that if we ran a real study of these two variables and we had only 50 people in the sample, we'd have to hope that the estimated correlation that we get from our data was at least as large as .50 or more, or else it would probably be non-significant.
-
-2. By extension this means that in order to publish this work, we are hoping that our data will grossly overestimate the magnitude of the actual correlation in the population. Put differently, the only way this finding has a fighting chance of being published is if it is grossly inaccurate. This is a bad position to be in, and it's a direct result of the strong emphasis on NHST and "significant findings" that exists in so many scientific disciplines.
-
-3. By further extension, if this finding did get published, there is now a published study out there that is incorrectly claiming that there is a strong relationship between X1 and X2 in this population. This is bad for several reasons. First, other researchers might see this and begin planning research of their own, chasing after a .50 effect that isn't actually as large as it seems. Second, if this finding has any real world implications - *think, those that might affect public policy, industry practices, or people's general quality of life* - then there are large segments of the public who are acting in good faith but being guided by information that is flawed.
-
-4. As I say often, confidence intervals are better than p values. This demonstrates why - even if we did get lucky$^{1}$ enough to find a correlation of, say r = .57, at least if we provided confidence intervals instead of p values readers could focus on the fact that the interval around that estimate was really wide (e.g., r = .57, CI$_{.95}$[.03,.99]). With an interval like that, we're effectively saying that the real correlation in the population could be as small as .03 (basically nonexistent) or as large as .99 (functionally a complete redundancy between X1 and X2). What would even be the point of such a stupid, useless statement, really? It would be akin to placing a bet on a football game, wagering that your team will score somewhere between 0 points and 200 points. Would anyone take that bet? Probably not.
-
-$^{1}$ *I mean "lucky" in the sense that we'd be able to publish the paper and get that sweet line on our CV. Not "lucky" as in we actually made a meaningful contribution to the field.*
