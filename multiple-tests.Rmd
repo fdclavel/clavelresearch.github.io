@@ -1,5 +1,5 @@
 ---
-title: "Multiple Sample and Tests Simulation"
+title: "Simulation of Multiple Samples/Tests to Illustrate Power"
 author: "Fred Clavel, Ph.D."
 date: "11 Mar 2021"
 output:
@@ -26,17 +26,17 @@ library(kableExtra)
 
 ## Introduction
 
-The purpose of this script is to enable demonstrations of the effects of essential characteristics of data on the significance of a test and the power to detect an effect.
+The purpose of this script is to enable demonstrations of the effects of essential characteristics of data on the power to detect a known population effect.
 
 It is designed to simulate data and allow for the following:
 
-- Adjustment of number of data sets (default is 100)
+- Adjustment of number of data sets (default is 200)
 - Adjustment of sample size per data set (each is a considered a random redraw from a population of 10,000) 
 - Adjustment of magnitude of effect (default is a correlation of r = .30 (medium effect) between 2 variables)
 
-Each adjustment above (particularly #2 and #3) will have an effect on alpha and power.
+Each adjustable characteristic above (particularly #2 and #3) is related to power.
 
-Results will include a summarized figure detailing results of all tests across each data set, indicating which were statistically significant and which were not, based on their confidence intervals.
+Results will include a summarized figure detailing results of all tests across each data set, indicating which were statistically significant and which were not, based on their confidence intervals. We will assume a standard alpha = .05 (i.e., the typical *p* value criterion we use in many sciences)
 
 
 ## Package preparation
@@ -48,12 +48,14 @@ require(mvnorm)
 require(MASS)
 require(dplyr)
 require(ggplot2)
+require(DT)
+require(tibble)
 ```
 
 
 ## Simulating data sets
 
-By default this program will simulate 100 data sets, each containing 100 random observations of two variables X1 and X2 drawn from a larger population of 10,000 people where the actual effect size is known to be r = .30. It will then run the bivariate correlation between X1 and X2 in each sample, and extract those correlation coefficients into a data frame containing the correlations and their confidence intervals.
+By default this program will simulate 200 data sets, each containing 100 random observations of two variables X1 and X2 drawn from a larger population of 10,000 people where the actual effect size is known to be r = .30. It will then run the bivariate correlation between X1 and X2 in each sample, and extract those correlation coefficients into a data frame containing the correlations and their confidence intervals.
 
 Each of these defaults can be adjusted by the user if desired. For a tutorial on adjusting the known correlation [please see my article here](https://fredclavel.org/2019/03/18/basics-standardization-and-the-z-score/)
 
@@ -64,6 +66,9 @@ sigma <- matrix(c(9, 3.8, 3.8, 16),2,2)
 
 set.seed(03112021)
 pop.data <- data.frame(mvrnorm(n=N, mu=mu, Sigma=sigma))
+
+#check the population correlation
+cor(pop.data)
 ```
 
 
@@ -77,7 +82,7 @@ The two adjustable parameters defined here are :
 ```{r define the adjustable parameters}
 #define adjustable parameters
 Nsampsize = 100 #this is the size of each random sample (default 100)
-Nrandsamps = 100 #this is the number of random samples to be drawn (default 100)
+Nrandsamps = 200 #this is the number of random samples to be drawn (default 200)
 
 ```
 
@@ -119,8 +124,8 @@ for(i in 1:Nrandsamps) {
 	results.data<- cbind(testnum, results.data)
 
 	#view first 6 rows
-	head(results.data)
-
+	table1<-head(results.data)
+  datatable(table1)
 ```
 
 
@@ -152,4 +157,123 @@ coeff.plot
 
 ```
 
+## How this tool helps explain power and alpha, relative to sample and effect sizes
 
+The defaults above detected the effect roughly 80% of the time, suggesting that this design has power of about .80 (which is often deemed "acceptable" in psychology).
+
+We can calculate power by hand to verify what the actual value is and see whether the empirical value matches what we expect theoretically [(or just check based on a standard power table. (see page 23))](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118342978.app2)
+
+
+Recall that we have here:
+
+- Population Effect size: rho = .30 (referred to as "rho")
+- Sample Size: N = 100 
+
+So power to detect this effect would be:
+
+\[\delta = \rho* \sqrt{N-1} \]
+\[\delta = .30* \sqrt{100-1} \]
+\[\delta = .30* \sqrt{99} \]
+\[\delta = .30* 9.95 \]
+\[\delta = 2.985 \]
+
+If we assume alpha = .05, two-tailed (which we are), then **power is about .85** to detect the population correlation of .30 with any 100 random observations we drew from that population. This is roughly consistent what we found based on the empirical demonstration - in the above example, the correlation test was significant in 169 of the 200 simulated random samples from the population (that is, 84.5% of the random samples resulted in a significant correlation, so **our empirically observed power here was .845**).
+
+
+## Effects of sample size adjustments
+
+**Power is directly affected by sample size, as is statistical significance, as we can demonstrate pretty easily using this tool.** If we run another set of simulated samples, but this time set our sample size at 50, two things will happen:
+
+- Power will decrease, resulting in fewer significant results across all 200 samples.
+- The precision of each estimate will decrease, resulting in larger confidence intervals (and therefore fewer significant results) across all 200 samples.
+
+```{r RErun the whole process using a sample size of 50}
+#define adjustable parameters
+Nsampsize2 = 50 #this is the size of each random sample (default 100)
+Nrandsamps2 = 200 #this is the number of random samples to be drawn (default 200)
+
+
+#create an empty list object to store the results of each test
+results2 = list()
+
+#use a for loop to extract coefficients and CI values
+for(i in 1:Nrandsamps2) {
+  tempsample <- sample_n(pop.data, Nsampsize2) 
+  tempcor <- cor.test(tempsample$X1, tempsample$X2)
+  CI  <- as.data.frame(tempcor$conf.int)
+  Rcoeff <- as.numeric(tempcor$estimate)
+  CIlow <- CI[1,1]
+  CIhigh <- CI[2,1]
+  tempdata2 <- data.frame(cbind(Rcoeff, CIlow, CIhigh))
+  
+  #add this iteration of tempdata to the results list
+  results2[[i]] <- tempdata2
+  
+}
+
+  #bind all results into a single data frame
+	results.data2 = do.call(rbind, results2)
+	
+	#add the test numbers to the data set.
+	testnum2 = seq(1,nrow(results.data2))
+	results.data2<- cbind(testnum2, results.data2)
+
+#compute a variable to denote significance at p <.05
+results.data2$sig <- NA
+results.data2$sig [results.data2$CIlow < 0 & results.data2$CIhigh > 0] <- "Not Significant"
+results.data2$sig [results.data2$CIlow > 0 & results.data2$CIhigh > 0] <- "Significant"
+results.data2$sig [results.data2$CIlow < 0 & results.data2$CIhigh < 0] <- "Significant"
+
+#tabulate and plot the results
+table(results.data2$sig)
+
+coeff.plot2 <- ggplot(data = results.data2, aes(x=testnum, y=Rcoeff, color=sig))+
+      geom_point()+
+      geom_errorbar(aes(ymin=CIlow, ymax=CIhigh))+
+      geom_hline(yintercept=0, size=1, color="darkgreen", alpha=.5)
+                      
+coeff.plot2
+
+	
+```
+
+Looking at the results, we can see both effects pretty clearly. 
+
+- **Power will decrease, resulting in fewer significant results across all 200 samples**
+-- There are far more red estimates that are nonsignificant, now that the sample size has been halved. *Because only 107 out of 200 tests were significant (or 54%) our observed power has decreased from .85 to about .54* (based on a standard power table, we would expect power of .56 for this design, so what we observed is about the same). 
+- **The precision of each estimate will decrease, resulting in larger confidence intervals (and therefore fewer significant results) across all 200 samples.**
+-- If we look closely at the Y axis for this 2nd figure, we can see that the upper and lower limits of the confidence intervals have gotten wider than they were in the previous example. This happens because the lower sample size in each sample makes the estimated correlations in each sample less precise - the standard errors get larger, which in turn increases the sizes of all the confidence intervals.
+
+We can actually quickly calculate the average size in both data sets for comparison!
+```{r comparing confidence interval sizes in both data sets}
+
+#compute the width by taking the difference between the upper and lower limits
+results.data$CIwidth <- results.data$CIhigh - results.data$CIlow
+results.data2$CIwidth <- results.data2$CIhigh - results.data2$CIlow
+
+#find the average of each
+
+N100.CIwidth <- mean(results.data$CIwidth, na.rm=T)
+N50.CIwidth <- mean(results.data2$CIwidth, na.rm=T)
+
+N100.CIwidth
+N50.CIwidth
+
+```
+
+
+In this case, the average width of the confidence intervals around the correlation estimates is different depending on the sample size. When the sample size was 100, the average width of the confidence interval was .36. However, when we cut the sample size in half, the average with of the confidence interval increased to .50.
+
+## Practical/teachable implications of power, sample size, and NHST
+
+What we've just seen has a couple of practical implications that help us understand why power matters and why NHST is a problematic standard in research.
+
+1. With an average CI width of .50, this means that if we ran a real study of these two variables and we had only 50 people in the sample, we'd have to hope that the estimated correlation that we get from our data was at least as large as .50 or more, or else it would probably be non-significant.
+
+2. By extension this means that in order to publish this work, we are hoping that our data will grossly overestimate the magnitude of the actual correlation in the population. Put differently, the only way this finding has a fighting chance of being published is if it is grossly inaccurate. This is a bad position to be in, and it's a direct result of the strong emphasis on NHST and "significant findings" that exists in so many scientific disciplines.
+
+3. By further extension, if this finding did get published, there is now a published study out there that is incorrectly claiming that there is a strong relationship between X1 and X2 in this population. This is bad for several reasons. First, other researchers might see this and begin planning research of their own, chasing after a .50 effect that isn't actually as large as it seems. Second, if this finding has any real world implications - *think, those that might affect public policy, industry practices, or people's general quality of life* - then there are large segments of the public who are acting in good faith but being guided by information that is flawed.
+
+4. As I say often, confidence intervals are better than p values. This demonstrates why - even if we did get lucky$^{1}$ enough to find a correlation of, say r = .57, at least if we provided confidence intervals instead of p values readers could focus on the fact that the interval around that estimate was really wide (e.g., r = .57, CI$_{.95}$[.03,.99]). With an interval like that, we're effectively saying that the real correlation in the population could be as small as .03 (basically nonexistent) or as large as .99 (functionally a complete redundancy between X1 and X2). What would even be the point of such a stupid, useless statement, really? It would be akin to placing a bet on a football game, wagering that your team will score somewhere between 0 points and 200 points. Would anyone take that bet? Probably not.
+
+$^{1}$ *I mean "lucky" in the sense that we'd be able to publish the paper and get that sweet line on our CV. Not "lucky" as in we actually made a meaningful contribution to the field.*
