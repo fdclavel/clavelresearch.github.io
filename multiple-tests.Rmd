@@ -262,7 +262,7 @@ N50.CIwidth
 ```
 
 
-In this case, the average width of the confidence intervals around the correlation estimates is different depending on the sample size. When the sample size was 100, the average width of the confidence interval was .36. However, when we cut the sample size in half, the average with of the confidence interval increased to .50.
+In this case, the average width of the confidence intervals around the correlation estimates is different depending on the sample size. When the sample size was 100, the average width of the confidence interval was .36. However, when we cut the sample size in half, the average width of the confidence interval increased to .50.
 
 ## Practical/teachable implications of power, sample size, and NHST
 
