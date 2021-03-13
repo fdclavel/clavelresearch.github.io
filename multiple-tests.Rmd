@@ -169,7 +169,7 @@ Recall that we have here:
 - Population Effect size: rho = .30 (referred to as "rho")
 - Sample Size: N = 100 
 
-So power to detect this effect would be:
+So the delta value relative to the power to detect this effect would be:
 
 \[\delta = \rho* \sqrt{N-1} \]
 \[\delta = .30* \sqrt{100-1} \]
@@ -177,7 +177,7 @@ So power to detect this effect would be:
 \[\delta = .30* 9.95 \]
 \[\delta = 2.985 \]
 
-If we assume alpha = .05, two-tailed (which we are), then **power is about .85** to detect the population correlation of .30 with any 100 random observations we drew from that population. This is roughly consistent what we found based on the empirical demonstration - in the above example, the correlation test was significant in 169 of the 200 simulated random samples from the population (that is, 84.5% of the random samples resulted in a significant correlation, so **our empirically observed power here was .845**).
+If we assume alpha = .05, two-tailed (which we are), then **power is about .85** to detect the population correlation of .30 with any 100 random observations we drew from that population (this is based on a standard power table for Pearson correlations). This is roughly consistent what we found based on the empirical demonstration - in the above example, the correlation test was significant in 169 of the 200 simulated random samples from the population (that is, 84.5% of the random samples resulted in a significant correlation, so **our empirically observed power here was .845**).
 
 
 ## Effects of sample size adjustments
